@@ -1,0 +1,46 @@
+{
+  "products": [
+    {
+      "image": "https://mir-s3-cdn-cf.behance.net/projects/404/6fd236163258005.Y3JvcCwzNTc5LDI4MDAsMjEyLDA.png",
+      "name": "iPhone 1",
+      "price": 100,
+      "article": "IP1",
+      "available": true
+    },
+    {
+      "image": "https://mir-s3-cdn-cf.behance.net/projects/404/6fd236163258005.Y3JvcCwzNTc5LDI4MDAsMjEyLDA.png",
+      "name": "iPhone 2",
+      "price": 100,
+      "article": "IP2",
+      "available": false
+    },
+    {
+      "image": "https://mir-s3-cdn-cf.behance.net/projects/404/6fd236163258005.Y3JvcCwzNTc5LDI4MDAsMjEyLDA.png",
+      "name": "iPhone 3",
+      "price": 150,
+      "article": "IP3",
+      "available": true
+    },
+    {
+      "image": "https://mir-s3-cdn-cf.behance.net/projects/404/6fd236163258005.Y3JvcCwzNTc5LDI4MDAsMjEyLDA.png",
+      "name": "iPhone 4",
+      "price": 200,
+      "article": "IP4",
+      "available": false
+    },
+    {
+      "image": "https://mir-s3-cdn-cf.behance.net/projects/404/6fd236163258005.Y3JvcCwzNTc5LDI4MDAsMjEyLDA.png",
+      "name": "iPhone 5",
+      "price": 300,
+      "article": "IP5",
+      "available": false
+    },
+    {
+      "image": "https://mir-s3-cdn-cf.behance.net/projects/404/6fd236163258005.Y3JvcCwzNTc5LDI4MDAsMjEyLDA.png",
+      "name": "iPhone 6",
+      "price": 350,
+      "article": "IP6",
+      "available": true
+    }
+  ]
+}
