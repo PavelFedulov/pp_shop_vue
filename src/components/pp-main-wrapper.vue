@@ -1,22 +1,30 @@
 <template>
   <div class="pp-main-wrapper">
     <pp-catalog></pp-catalog>
-    <pp-cart></pp-cart>
+    <pp-cart
+        v-if="CART.length"
+        :cart_data="CART"
+    />
   </div>
 </template>
 
 <script>
 import PpCatalog from "@/components/pp-catalog.vue";
 import PpCart from "@/components/pp-cart.vue";
+import {mapGetters} from "vuex";
+
 export default {
   name: "pp-main-wrapper",
   components: {PpCart, PpCatalog},
   props: {},
   data() {
-    return {
-    }
+    return {}
   },
-  computed: {},
+  computed: {
+    ...mapGetters([
+      'CART'
+    ])
+  },
   methods: {},
   watch: {},
   mounted() {

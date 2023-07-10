@@ -9,7 +9,7 @@
     <p class="pp-catalog-item__price">Price: {{ product_data.price}} $</p>
     <button
         class="pp-catalog-item__add__to__cart__btn btn"
-        @click="sendDataToParent"
+        @click="addToCart"
     >Add to cart
     </button>
   </div>
@@ -25,8 +25,8 @@ export default {
     }
   },
   methods: {
-    sendDataToParent() {
-      this.$emit('sendArticle', this.product_data.article)
+    addToCart() {
+      this.$emit('addToCart',this.product_data)
     }
   }
 }

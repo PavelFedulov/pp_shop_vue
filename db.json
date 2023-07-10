@@ -1,24 +1,24 @@
 {
   "products": [
     {
-      "image": "https://mir-s3-cdn-cf.behance.net/projects/404/6fd236163258005.Y3JvcCwzNTc5LDI4MDAsMjEyLDA.png",
-      "name": "iPhone 1",
-      "price": 100,
-      "article": "IP1",
+      "image": "https://mockups-design.com/wp-content/uploads/2020/06/Free_MacBook_Pro_1.jpg",
+      "name": "MacBook Pro",
+      "price": 1500,
+      "article": "MBPro",
       "available": true
     },
     {
-      "image": "https://mir-s3-cdn-cf.behance.net/projects/404/6fd236163258005.Y3JvcCwzNTc5LDI4MDAsMjEyLDA.png",
-      "name": "iPhone 2",
-      "price": 100,
-      "article": "IP2",
+      "image": "https://mockups-design.com/wp-content/uploads/2022/09/Free_Iphone_14_Pro_Mockup_4.jpg",
+      "name": "iPhone 14 pro",
+      "price": 1100,
+      "article": "IP14Pro",
       "available": false
     },
     {
-      "image": "https://mir-s3-cdn-cf.behance.net/projects/404/6fd236163258005.Y3JvcCwzNTc5LDI4MDAsMjEyLDA.png",
-      "name": "iPhone 3",
-      "price": 150,
-      "article": "IP3",
+      "image": "https://mockups-design.com/wp-content/uploads/2021/08/Apple_Watch_Mockup_2.jpg",
+      "name": "Apple Watch Series 8",
+      "price": 500,
+      "article": "AW8",
       "available": true
     },
     {
