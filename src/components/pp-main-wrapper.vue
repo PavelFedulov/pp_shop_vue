@@ -1,35 +1,25 @@
 <template>
   <div class="pp-main-wrapper">
-    <pp-catalog></pp-catalog>
-    <pp-cart
-        v-if="CART.length"
-        :cart_data="CART"
-    />
+    <router-view v-slot="{Component, route}">
+      <keep-alive>
+        <component :is="Component" :key="route.path"/>
+      </keep-alive>
+    </router-view>
   </div>
 </template>
 
 <script>
-import PpCatalog from "@/components/pp-catalog.vue";
-import PpCart from "@/components/pp-cart.vue";
-import {mapGetters} from "vuex";
-
 export default {
   name: "pp-main-wrapper",
-  components: {PpCart, PpCatalog},
   props: {},
   data() {
     return {}
   },
   computed: {
-    ...mapGetters([
-      'CART'
-    ])
   },
   methods: {},
   watch: {},
-  mounted() {
-    console.log("I am alive")
-  }
+  mounted() {}
 }
 </script>
 

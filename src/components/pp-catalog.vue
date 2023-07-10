@@ -1,5 +1,8 @@
 <template>
   <div class="pp-catalog">
+    <router-link :to="{name: 'cart', params: {cart_data: CART}}">
+      <div class="pp-catalog__link_to_cart">Cart: {{ CART.length }}</div>
+    </router-link>
     <h1 class="pp-catalog__title">Catalog</h1>
     <div class="pp-catalog__list">
       <pp-catalog-item
@@ -25,7 +28,8 @@ export default {
   },
   computed: {
     ...mapGetters([
-      'PRODUCTS'
+      'PRODUCTS',
+      'CART'
     ])
   },
   methods: {
@@ -49,6 +53,8 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+@import '@/assets/styles/styles.scss';
+
 .pp-catalog {
   &__list {
     display: flex;
@@ -56,9 +62,13 @@ export default {
     justify-content: space-between;
     align-items: center;
   }
-}
 
-.pp-catalog__title {
-  align-items: center;
+  &__link_to_cart {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    padding: $padding*2;
+    border: solid 1px #aeaeae;
+  }
 }
 </style>

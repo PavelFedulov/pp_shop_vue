@@ -18,6 +18,7 @@ export default createStore({
                     if(item.article === product.article) {
                         isProductExists = true;
                         item.quantity++
+                        console.log(state.cart)
                     }
                 });
                 if (!isProductExists) {
