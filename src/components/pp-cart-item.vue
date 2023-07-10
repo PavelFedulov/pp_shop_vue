@@ -11,13 +11,18 @@
       <p>{{ cart_item_data.article }}</p>
     </div>
     <div class="pp-cart-item__quantity">
-
+      <p>Qty: {{ this.cart_item_data.quantity }}</p>
     </div>
-    <button>Delete</button>
+    <button
+        @click="deleteFromCart"
+    >
+      Delete
+    </button>
   </div>
 </template>
 
 <script>
+
 export default {
   props: {
     cart_item_data: {
@@ -25,8 +30,16 @@ export default {
       required: true
     }
   },
+  methods: {
+
+    deleteFromCart() {
+      this.$emit('deleteFromCart')
+    },
+  },
   mounted() {
-    this.cart_item_data
+    const cartItemData = this.cart_item_data;
+    cartItemData.quantity = 1;
+  }
 }
 </script>
 
