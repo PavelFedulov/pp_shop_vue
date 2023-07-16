@@ -7,17 +7,20 @@
     >
     <p class="pp-catalog-item__name">{{ product_data.name }}</p>
     <p class="pp-catalog-item__price">Price: {{ product_data.price}} $</p>
-    <button
+    <pp-button
         class="pp-catalog-item__add__to__cart__btn btn"
         @click="addToCart"
     >Add to cart
-    </button>
+    </pp-button>
   </div>
 </template>
 
 <script>
+import PpButton from "@/components/pp-button.vue";
+
 export default {
   name: "pp-catalog-item",
+  components: {PpButton},
   props: {
     product_data: {
       type: Object,
