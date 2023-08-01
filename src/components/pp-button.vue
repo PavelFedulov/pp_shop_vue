@@ -18,5 +18,6 @@ export default {
     background-color: darkorchid;
     border: none;
     border-radius: $radius*3;
+    cursor: pointer;
   }
 </style>

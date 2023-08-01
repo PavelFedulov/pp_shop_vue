@@ -11,19 +11,35 @@
       <p>{{ cart_item_data.article }}</p>
     </div>
     <div class="pp-cart-item__quantity">
-      <p>Qty: {{ this.cart_item_data.quantity }}</p>
+      <p>Qty: </p>
+      <span>
+        <span @click="decrementItem"
+              class="quantity-btn"
+        >
+          -
+        </span>
+        {{ this.cart_item_data.quantity }}
+        <span @click="incrementItem"
+              class="quantity-btn"
+        >
+          +
+        </span>
+      </span>
     </div>
-    <button
+    <pp-button
         @click="deleteFromCart"
     >
       Delete
-    </button>
+    </pp-button>
   </div>
 </template>
 
 <script>
 
+import PpButton from "@/components/pp-button.vue";
+
 export default {
+  components: {PpButton},
   props: {
     cart_item_data: {
       type: Object,
@@ -35,6 +51,14 @@ export default {
     deleteFromCart() {
       this.$emit('deleteFromCart')
     },
+
+    decrementItem() {
+      this.$emit('decrement')
+    },
+
+    incrementItem() {
+      this.$emit('increment')
+    }
   },
   mounted() {
     const cartItemData = this.cart_item_data;
@@ -57,5 +81,14 @@ export default {
   &__image {
     max-width: 20%
   }
+}
+
+button {
+  margin-right: 20px;
+  cursor: pointer;
+}
+
+.quantity-btn{
+  cursor: pointer;
 }
 </style>
