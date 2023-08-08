@@ -76,7 +76,7 @@ export default {
   justify-content: space-between;
   align-items: center;
   box-shadow: 0 0 4px 0 $greyShadow;
-  margin-bottom: $margin;
+  margin-bottom: 20px;
 
   &__image {
     max-width: 20%

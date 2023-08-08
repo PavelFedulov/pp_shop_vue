@@ -20,4 +20,13 @@ export default {
     border-radius: $radius*3;
     cursor: pointer;
   }
+
+.pp-btn:hover{
+  background-color: #5d1d7b;
+}
+
+.pp-btn:active:after {
+  opacity: 1;
+  transition: 0.8s;
+}
 </style>

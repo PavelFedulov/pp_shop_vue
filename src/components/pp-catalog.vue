@@ -3,7 +3,7 @@
     <router-link :to="{name: 'cart', params: {cart_data: CART}}">
       <div class="pp-catalog__link_to_cart">Cart: {{ CART.length }}</div>
     </router-link>
-    <h1 class="pp-catalog__title">Catalog</h1>
+    <pp-header>Tech Shop</pp-header>
     <div class="pp-catalog__list">
       <pp-catalog-item
           v-for="product in PRODUCTS"
@@ -19,10 +19,11 @@
 <script>
 import ppCatalogItem from "@/components/pp-catalog-item.vue";
 import {mapActions, mapGetters} from "vuex";
+import PpHeader from "@/components/pp-header.vue";
 
 export default {
   name: "pp-catalog",
-  components: {ppCatalogItem},
+  components: {PpHeader, ppCatalogItem},
   data() {
     return {}
   },
@@ -56,6 +57,8 @@ export default {
 @import '@/assets/styles/styles.scss';
 
 .pp-catalog {
+  max-width: 1200px;
+  margin-top: 150px;
   &__list {
     display: flex;
     flex-wrap: wrap;

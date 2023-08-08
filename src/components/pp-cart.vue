@@ -3,8 +3,8 @@
     <router-link :to="{name: 'catalog'}">
       <div class="pp-catalog__link_to_cart">Back to Catalog</div>
     </router-link>
-    <h1>Cart</h1>
-    <p v-if="!CART.length">There are no products in cart...</p>
+    <pp-header>Cart</pp-header>
+    <p class="empty_cart" v-if="!CART.length">There are no products in cart...</p>
     <pp-cart-item
         v-for="(item, index) in CART"
         :key="item.article"
@@ -23,9 +23,10 @@
 <script>
 import ppCartItem from "@/components/pp-cart-item.vue";
 import {mapActions, mapGetters} from "vuex";
+import PpHeader from "@/components/pp-header.vue";
 
 export default {
-  components: {ppCartItem},
+  components: {PpHeader, ppCartItem},
   props: {
     cart_data: {
       type: Array,
@@ -78,15 +79,18 @@ export default {
 .pp-catalog {
   &__link_to_cart {
     position: absolute;
+    margin-top: 100px;
     top: 10px;
     right: 10px;
     padding: $padding*2;
     border: solid 1px #aeaeae;
+    border-radius: 15px;
   }
 }
 
 .pp-cart {
-  margin-bottom: 100px;
+  margin-top: 130px;
+
 
   &__total {
     position: fixed;
@@ -103,6 +107,11 @@ export default {
 }
 
 .total__name {
-  margin-right: $margin*2;
+  margin-right: $margin;
 }
+
+.empty_cart {
+  margin-top: 130px;
+}
+
 </style>
